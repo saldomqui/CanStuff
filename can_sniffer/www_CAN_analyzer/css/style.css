@@ -1,0 +1,336 @@
+/*! 
+ \file style.css
+ \author Salvador Dominguez
+ \brief CSS style
+*/
+
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+:root {
+  --var_params_heigt : 60px;
+}
+
+span {
+  font-weight: bolder;
+}
+
+h1 {
+  text-align: center;
+}
+
+input[type="number"] {
+  width: 150px;
+}
+
+canvas {
+  background-color: black;
+  margin: 20px;
+}
+
+.filter_form {
+  padding-left: 20px;
+  border: 3px solid;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+}
+
+#web_title {
+  text-align: center;
+}
+
+#logo {
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  width: 13%;
+  height: 60px;
+  float: right;
+  position: fixed;
+  top: 0;
+  right: 0;
+}
+
+#connection {
+    height: 8%;
+    margin: 0.5em;
+    padding: 5px;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    background: #084B8A55;  
+}
+
+#ip_adr_value
+{
+    width: 200px;
+    height:40px;
+    margin: 5px;
+    margin-top: 0px;
+}
+
+#connect_butt
+{
+    background: #F00;
+    color: #000;
+    overflow: hidden;
+    line-height: 50px;
+    border: 3px solid;
+    text-align: center;
+    padding: 5px;
+    font: bold 20px verdana, sans-serif;
+    -moz-box-shadow: rgb(50,50,50) 5px 5px 10px;
+    -webkit-box-shadow: rgb(50,50,50) 5px 5px 10px;
+    box-shadow: rgb(50,50,50) 5px 5px 10px;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+}
+
+.select_cars {
+    font-size:15px;
+}
+
+select.select_cars  option{
+    font-size:15px;
+    font-family: "Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", Helvetica, Arial, "sans-serif";
+    color : black;
+}
+
+.table {
+  width: 100%;
+}
+
+.all_can_table_check_cell,
+ .all_can_table_id_cell,
+  .all_can_table_data_cell,
+   .all_can_table_freq_cell,
+    .all_can_table_freq_change_cell {
+  height: 30px;
+  text-align: center;
+}
+
+.all_can_table_check_cell,
+ .all_can_table_id_cell,
+   .all_can_table_freq_cell {
+  width: 100px;
+}
+
+.all_can_table_data_cell {
+  width: 60px;
+}
+
+
+.all_can_table_freq_change_cell {
+  width: 200px;
+}
+
+.all_can_table_id_cell,
+.all_can_table_data_cell {
+  font-weight: bold;
+}
+
+.msg_byte_div {
+  background-color: lightblue;
+  width: 400px;
+  height: 45px;
+  padding: 5px;
+  border: 2px solid;
+  border-color: black;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+}
+
+.msg_hex_val_div {
+  border: 1px solid;
+  border-color: black;
+  text-align: center;
+  display: inline-block;
+  width: 60px;
+  margin-right: 5px;
+  font-weight: bold;
+  font-size: 20px;
+  color: black;
+  background: white;
+}
+
+.msg_byte_num_div {
+  border: 1px solid;
+  border-color: black;
+  text-align: center;
+  display: inline-block;
+  width: 60px;
+  background: red;
+  color: white;
+}
+
+.sel_msg_freq {
+  font-size: 20px;
+  font-weight: bold;
+  height: 100%;
+  width: 250px;
+  text-align: center;
+  padding-top: 10px;
+}
+
+.bit_changed_cell {
+  border: 1px solid;
+  border-color: white;
+  text-align: center;
+  display: inline-block;
+  width: 30px;
+  font-size: 20px;
+  font-weight: bold;
+  color: white;
+  background-color: red;
+}
+
+.bit_not_changed_cell {
+  border: 1px solid;
+  border-color: white;
+  text-align: center;
+  display: inline-block;
+  width: 30px;
+  font-size: 20px;
+  font-weight: bold;
+  color: white;
+  background-color: black;
+}
+
+.bit_selected_cell {
+  color: yellow;
+  border: 3px solid;
+  font-size: 25px;
+}
+
+
+.convert_params_form {
+  width: 300px;
+  height: var(--var_params_heigt);
+  padding: 5px;
+  border: 2px solid;
+  border-color: black;
+  background-color: lightblue;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  font-size: 20px;
+  font-weight: font;
+  display: inline-block;
+}
+
+.plot_params_form {
+  margin-top: 40px;
+  width: 100%;
+  border: 2px solid;
+  border-color: black;
+  background-color: lightblue;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  font-size: 20px;
+  font-weight: font;
+  display: inline-block;
+}
+
+.numeric_value_display {
+  height: var(--var_params_heigt);
+  width: 300px;
+  background-color: rgb(2, 5, 54);
+  text-align: center;
+  color: white;
+  font-size: 40px;
+  font-weight: bold;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  display: inline-block;
+}
+
+.select-editable {
+  position:relative;
+  background-color:white;
+  border:solid grey 1px;
+  width: 300px;
+  height: 40px;
+  float: right;
+  font-size: 20px;
+  color: black;
+}
+.select-editable select {
+  position:absolute;
+  top:0px;
+  left:0px;
+  font-size:20px;
+  border:none;
+  width:100%;
+  height: 100%;
+  margin:0;
+  color: black;
+}
+.select-editable input{
+  position:absolute;
+  top:0px;
+  left:0px;
+  width:95%;
+  padding:1px;
+  font-size:20px;
+  border:none;
+  color: black;
+}
+.select-editable select:focus, .select-editable input:focus {
+  outline:none;
+}
+
+.variable_parameters_div {
+height: 80px;
+}
+
+.var_names_cell {
+  color: black;
+  background-color: lightgrey;
+  font-size: 10px;
+  font-weight: bold;
+  width: 400px;
+}
+
+#sel_msg_id {
+  height: 100%;
+  font-size: 35px;
+  font-weight: bold;
+  text-align: left;
+  margin-left: 20px;
+}
+
+#msg_info {
+  padding-left: 1%;
+  width: 98%;
+}
+
+#button_pause_msg_inspect, #button_check_bit_changes_div {
+  width: 150px;
+  height: var(--var_params_heigt);
+  display: inline-block;
+}
+
+#bt_return_main_menu {
+  margin-left: 20px;
+}
+
+#button_set_candidate_as {
+  width: 200px;
+  height: 100%;
+}
+
+#variable_candiate_form {
+  width: 500px;
+  height: 100%;
+  display: inline-block
+}
+
+#min_plot_val_id, #max_plot_val_id {
+  width: 80px;
+}

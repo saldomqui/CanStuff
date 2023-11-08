@@ -1,0 +1,130 @@
+<?xml version="1.0"?>
+<var_list>
+  <var  name="AUTONOMY">
+    <msg_id_hex  val="0654" freq="2" offset="0" scale="1" comment="In km">
+      <mask  byte_idx="5" mask_hex="0F"/>
+      <mask  byte_idx="6" mask_hex="F0"/>
+    </msg_id_hex>
+  </var>
+  <var  name="BRAKE_STRENGTH">
+    <msg_id_hex  val="0352" freq="26" offset="0" scale="1" comment="Value in the range [0-200]">
+      <mask  byte_idx="3" mask_hex="FF"/>
+    </msg_id_hex>
+  </var>
+  <var  name="FL_DOOR_OPEN">
+    <msg_id_hex  val="05DE" freq="11" offset="0" scale="1" comment="1 == open, 0 == closed">
+      <mask  byte_idx="1" mask_hex="08"/>
+    </msg_id_hex>
+  </var>
+  <var  name="FL_SEAT_BELT">
+    <msg_id_hex  val="0653" freq="10" offset="0" scale="1" comment="1 == unfastened, 0 == fastened">
+      <mask  byte_idx="1" mask_hex="40"/>
+    </msg_id_hex>
+  </var>
+  <var  name="FL_WHEEL_SPEED">
+    <msg_id_hex  val="029A" freq="123" offset="0" scale="0.005" comment="Speed in km/h">
+      <mask  byte_idx="0" mask_hex="FF"/>
+      <mask  byte_idx="1" mask_hex="FF"/>
+    </msg_id_hex>
+  </var>
+  <var  name="FR_DOOR_OPEN">
+    <msg_id_hex  val="05DE" freq="10" offset="0" scale="1" comment="1 == open, 0 == closed">
+      <mask  byte_idx="1" mask_hex="02"/>
+    </msg_id_hex>
+  </var>
+  <var  name="FR_SEAT_BELT">
+    <msg_id_hex  val="0653" freq="10" offset="0" scale="1" comment="1 == unfastened, 0 == fastened">
+      <mask  byte_idx="1" mask_hex="10"/>
+    </msg_id_hex>
+  </var>
+  <var  name="FR_WHEEL_SPEED">
+    <msg_id_hex  val="029A" freq="122" offset="0" scale="0.005" comment="Speed in km/h">
+      <mask  byte_idx="2" mask_hex="FF"/>
+      <mask  byte_idx="3" mask_hex="FF"/>
+    </msg_id_hex>
+  </var>
+  <var  name="GEAR_SHIFT">
+    <msg_id_hex  val="017E" freq="101" offset="0" scale="1" comment="0 == P, 1 == R, 2 == N, 3 ==D, 4 == MODEB">
+      <mask  byte_idx="6" mask_hex="30"/>
+    </msg_id_hex>
+  </var>
+  <var  name="HAND_BRAKE">
+    <msg_id_hex  val="035C" freq="10" offset="0" scale="1" comment="If == 0x08 hand_brake=on">
+      <mask  byte_idx="7" mask_hex="0F"/>
+    </msg_id_hex>
+  </var>
+  <var  name="LEFT_BLK_LIGHTS">
+    <msg_id_hex  val="05DE" freq="10" offset="0" scale="1" comment="1 == on, 0 == off">
+      <mask  byte_idx="0" mask_hex="20"/>
+    </msg_id_hex>
+  </var>
+  <var  name="REGEN_BRAKE">
+    <msg_id_hex  val="018A" freq="100" offset="64" scale="1" comment="no units">
+      <mask  byte_idx="4" mask_hex="FF"/>
+    </msg_id_hex>
+  </var>
+  <var  name="RIGHT_BLK_LIGHTS">
+    <msg_id_hex  val="05DE" freq="10" offset="0" scale="1" comment="1 == on, 0 == off">
+      <mask  byte_idx="0" mask_hex="40"/>
+    </msg_id_hex>
+  </var>
+  <var  name="RL_DOOR_OPEN">
+    <msg_id_hex  val="05DE" freq="10" offset="0" scale="1" comment="1 == open, 0 == closed">
+      <mask  byte_idx="2" mask_hex="40"/>
+    </msg_id_hex>
+  </var>
+  <var  name="RL_SEAT_BELT">
+    <msg_id_hex  val="0653" freq="10" offset="0" scale="1" comment="1 == fastened, 0 == unfastened">
+      <mask  byte_idx="2" mask_hex="80"/>
+    </msg_id_hex>
+  </var>
+  <var  name="RL_WHEEL_SPEED">
+    <msg_id_hex  val="029C" freq="119" offset="0" scale="0.005" comment="Speed in km/h">
+      <mask  byte_idx="0" mask_hex="FF"/>
+      <mask  byte_idx="1" mask_hex="FF"/>
+    </msg_id_hex>
+  </var>
+  <var  name="RMIDDLE_SEAT_BELT">
+    <msg_id_hex  val="0653" freq="10" offset="0" scale="1" comment="1 == fastened, 0 == unfastened">
+      <mask  byte_idx="1" mask_hex="02"/>
+    </msg_id_hex>
+  </var>
+  <var  name="RR_DOOR_OPEN">
+    <msg_id_hex  val="05DE" freq="11" offset="0" scale="1" comment="1 == open, 0 == closed">
+      <mask  byte_idx="2" mask_hex="10"/>
+    </msg_id_hex>
+  </var>
+  <var  name="RR_SEAT_BELT">
+    <msg_id_hex  val="0653" freq="9" offset="0" scale="1" comment="1 == unfastened, 0 == fastened">
+      <mask  byte_idx="2" mask_hex="10"/>
+    </msg_id_hex>
+  </var>
+  <var  name="RR_WHEEL_SPEED">
+    <msg_id_hex  val="029C" freq="127" offset="0" scale="0.005" comment="Speed in km/h">
+      <mask  byte_idx="2" mask_hex="FF"/>
+      <mask  byte_idx="3" mask_hex="FF"/>
+    </msg_id_hex>
+  </var>
+  <var  name="STEERING_WHEEL_ANGLE">
+    <msg_id_hex  val="00C6" freq="100" offset="32767" scale="0.01" comment="Angle in degrees">
+      <mask  byte_idx="0" mask_hex="FF"/>
+      <mask  byte_idx="1" mask_hex="FF"/>
+    </msg_id_hex>
+  </var>
+  <var  name="STEERING_WHEEL_ANG_SPEED">
+    <msg_id_hex  val="00C6" freq="101" offset="32767" scale="0.01" comment="Angular speed in deg/sec">
+      <mask  byte_idx="2" mask_hex="FF"/>
+      <mask  byte_idx="3" mask_hex="FF"/>
+    </msg_id_hex>
+  </var>
+  <var  name="THROTTLE_PEDAL">
+    <msg_id_hex  val="0186" freq="101" offset="0" scale="1" comment="In range [0-200]">
+      <mask  byte_idx="5" mask_hex="FF"/>
+    </msg_id_hex>
+  </var>
+  <var  name="TRUNK_DOOR_OPEN">
+    <msg_id_hex  val="05DE" freq="11" offset="0" scale="1" comment="1 == open, 0 == closed">
+      <mask  byte_idx="7" mask_hex="10"/>
+    </msg_id_hex>
+  </var>
+</var_list>

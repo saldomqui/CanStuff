@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>CAN ANALYSER</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="description" content="CAN Analyzer">
+  <meta name="keywords" content="autonomous vehicles, selfdriving cars, drive-by-wire, LS2N">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- CSS -->
+  <link rel="stylesheet" type="text/css" href="css/bootstrap-4.0.0.css" />
+  <link rel="stylesheet" type="text/css" href="css/style.css" />
+
+  <!--  JAVASCRIPT -->
+  <script type="text/javascript" src="js/roslibjs/build/eventemitter2.min.js"></script>
+  <script type="text/javascript" src="js/roslibjs/build/roslib.min.js"></script>
+  <script type="text/javascript" src="js/Chart.js/moment.js"></script>
+  <script type="text/javascript" src="js/Chart.js/Chart.bundle.js"></script>
+  <script type="text/javascript" src="js/Chart.js/chartjs-plugin-dragdata.min.js"></script>
+
+
+  <script type="text/javascript" src="js/plot_config.js"></script>
+  <script type="text/javascript" src="js/connection.js"></script>
+</head>
+
+<body>
+  <div id="container">
+    <div id="header">
+      <div id="web_title">
+        <h1>CAN Analyser</h1>
+      </div>
+      <div id="logo"><img src="images/LogoSAGA.png" width="100%" height="96px" /></div>
+    </div>
+    <div class="row" id="connection">
+      <div class="col-sm-4.5">
+        <form id="connect_form" action="javascript:con.connect();">
+          <input type="submit" id="connect_butt" value="connect">
+        </form>
+      </div>
+    </div>
+    <div id="content">
+      <section id="main_menu">
+        <div class="row">
+          <div class="col-8 offset-1">
+            <div class="filter_form">
+              <form>
+                <span>Filter CAN msgs:</span>
+                <label for="can_all_filter_freq_min">Min Frequency</label>
+                <input type="number" id="can_all_filter_freq_min_id" name="can_all_filter_freq_min" value="0" step="10"
+                  min="0" max="500">
+                <label for="can_all_filter_freq_max">Max Frequency</label>
+                <input type="number" id="can_all_filter_freq_max_id" name="can_all_filter_freq_max" value="200"
+                  step="10" min="0" max="500">
+                <input class="dialog_button" type="button" id="bt_pause_all_can_data"
+                  onClick="javascript:con.PauseAllCANData();" value="Pause" />
+              </form>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-12">
+            <div id="all_can_ids"></div>
+          </div>
+        </div>
+      </section>
+      <section id="msg_inspection">
+        <div class="row">
+          <div class="col-4">
+            <div id="sel_msg_id"></div>
+          </div>
+          <div class="col-2">
+            <div class="sel_msg_freq" id="sel_msg_freq_div"></div>
+          </div>
+          <div class="col-2">
+            <div class="sel_msg_freq" id="sel_msg_freq_change_div"></div>
+          </div>
+          <div class="col-1.5">
+            <input type="button" id="button_check_bit_changes_div" onClick="javascript:con.ResetBitChanges();"
+              value="Reset Bit Changes">
+          </div>
+          <div class="col-2">
+            <div class="numeric_value_display" id="raw_value_div"></div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-12">
+            <div id="msg_info"> </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-11">
+            <canvas id="value_canvas" height="63px"></canvas>
+          </div>
+          <div class="col-1">
+            <div class="row">
+              <div class="col-12">
+                <form class="plot_params_form">
+                  <label for="max_plot_val">Max value</label>
+                  <input type="number" name="max_plot_val " id="max_plot_val_id" value="100.0">
+                </form>
+              </div>
+            </div>
+            <div class="row hlignevide"></div>
+            <div class="row hlignevide"></div>
+            <div class="row">
+              <div class="col-12">
+                <form class="plot_params_form">
+                  <label for="min_plot_val">Min value</label>
+                  <input type="number" name="min_plot_val " id="min_plot_val_id" value="0.0">
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-12">
+            <form class="convert_params_form" style="margin-left: 20px">
+              <label for="offset_value">Offset value</label>
+              <input type="number" name="offset_value" id="offset_value_id" value="0.0">
+            </form>
+            <form class="convert_params_form">
+              <label for="scale_value">Scale value</label>
+              <input type="number" name="scale_value" id="scale_value_id" value="1.0">
+            </form>
+            <input type="button" id="button_pause_msg_inspect" onClick="javascript:con.PauseMsgInspection();"
+              value="Pause">
+            <div class="numeric_value_display" id="converted_value_div"></div>
+            <form id="variable_candiate_form">
+              <input type="button" id="button_set_candidate_as" onClick="javascript:con.setCandidateAs();"
+                value="Variable candidate As:">
+              <div class="select-editable">
+                <select onchange="javascrypt:con.selectVariable(this.nextElementSibling,this.value)" id="var_select">
+                  <option value=""></option>
+                </select>
+                <input type="text" name="format" value="" id="variable_candidate" />
+              </div>
+            </form>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-1"><input type="button" id="bt_return_main_menu" onClick="javascript:con.ReturnMainMenu();"
+              value="Return" /></div>
+        </div>
+      </section>
+    </div>
+  </div>
+
+</body>
+
+</html>

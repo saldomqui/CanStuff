@@ -1,0 +1,51 @@
+<?xml version="1.0"?>
+<var_list>
+  <var  name="AUTONOMY"><!-- UNSIGNED CHAR -->
+  </var>
+  <var  name="BRAKE_STRENGTH"><!-- UNSIGNED CHAR -->
+  </var>
+  <var  name="FL_DOOR_OPEN"><!-- BOOLEAN -->
+  </var>
+  <var  name="FL_SEAT_BELT"><!-- BOOLEAN -->
+  </var>
+  <var  name="FL_WHEEL_SPEED"><!-- FLOAT -->
+  </var>
+  <var  name="FR_DOOR_OPEN"><!-- BOOLEAN -->
+  </var>
+  <var  name="FR_SEAT_BELT"><!-- BOOLEAN -->
+  </var>
+  <var  name="FR_WHEEL_SPEED"><!-- FLOAT -->
+  </var>
+  <var  name="GEAR_SHIFT"><!-- UNSIGNED CHAR -->
+  </var>
+  <var  name="HAND_BRAKE"><!-- BOOLEAN -->
+  </var>
+  <var  name="LEFT_BLK_LIGHTS"><!-- BOOLEAN -->
+  </var>
+  <var  name="REGEN_BRAKE"><!-- UNSIGNED CHAR -->
+  </var>
+  <var  name="RIGHT_BLK_LIGHTS"><!-- BOOLEAN -->
+  </var>
+  <var  name="RL_DOOR_OPEN"><!-- BOOLEAN -->
+  </var>
+  <var  name="RL_SEAT_BELT"><!-- BOOLEAN -->
+  </var>
+  <var  name="RL_WHEEL_SPEED"><!-- FLOAT -->
+  </var>
+  <var  name="RMIDDLE_SEAT_BELT"><!-- BOOLEAN -->
+  </var>
+  <var  name="RR_DOOR_OPEN"><!-- BOOLEAN -->
+  </var>
+  <var  name="RR_SEAT_BELT"><!-- BOOLEAN -->
+  </var>
+  <var  name="RR_WHEEL_SPEED"><!-- FLOAT -->
+  </var>
+  <var  name="STEERING_WHEEL_ANGLE"><!-- FLOAT -->
+  </var>
+  <var  name="STEERING_WHEEL_ANG_SPEED"><!-- FLOAT -->
+  </var>
+  <var  name="THROTTLE_PEDAL"><!-- UNSIGNED CHAR -->
+  </var>
+  <var  name="TRUNK_DOOR_OPEN"><!-- BOOLEAN -->
+  </var>
+</var_list>

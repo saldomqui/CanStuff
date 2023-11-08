@@ -1,0 +1,25 @@
+<launch>
+  <arg name="webserver_root_dir" default="$(find can_sniffer)/www_CAN_analyzer" />
+
+  <!-- WEB CONTROL -->
+   <include file="$(find rosbridge_server)/launch/rosbridge_websocket.launch"/>
+
+  <include file="$(find can_reader)/launch/can_reader.launch"/>
+
+  <!-- CAN SNIFFER NODE /-->
+  <node name="can_sniffer" pkg="can_sniffer" type="can_sniffer_node" respawn="false" output="screen"> 
+    <remap from="can/data" to="can_frames_device_r" /> 
+    <param name="extendedCanId" type="bool" value="false" />
+    <param name="fileNameCanFilteredMsgs" type="string" value="$(find can_sniffer)/config/can_excluded.xml" /> 
+    <param name="fileNameInspectedVariables" type="string" value="$(find can_sniffer)/config/inspected_variables.xml" />
+  </node>
+
+    <!--_____________________________ WEB SERVER ______________________________________ -->
+    <arg name="port" default="9005" />
+    <!--arg name="site_files_dir" default="$(find thorvald_launch)/config/site_files"/-->
+    <node pkg="thorvald_launch" type="webserver.py" name="can_sniffer_webserver" output="screen">
+      <env name="WEBSERVER_PORT" value="$(arg port)" />
+      <env name="WEBSERVER_ROOT_DIR" value="$(arg webserver_root_dir)" />
+    </node>
+
+</launch>

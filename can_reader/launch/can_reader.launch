@@ -1,0 +1,8 @@
+<launch>
+  <!-- CAN MONITOR NODE /-->
+  <node name="can_reader" pkg="can_reader" type="can_reader_node" respawn="false" output="screen"> 
+    <remap from="can/data_read" to="can_frames_device_r" /> 
+    <param name="can_port" type="string" value="slcan0" />
+  </node>
+
+</launch>
